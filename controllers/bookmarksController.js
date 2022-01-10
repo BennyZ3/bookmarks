@@ -1,5 +1,6 @@
 //Dependencies
 const express = require("express");
+const app = require("../app");
 
 //Files
 const bookmarksArray = require("../models/bookmarks");
@@ -21,4 +22,5 @@ bookmarks.get("/", (request, response) => {
 // bookmarks.get('/demo', (request, response) => {
 //     response.send('')
 // })
+
 module.exports = bookmarks;

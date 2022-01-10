@@ -18,5 +18,11 @@ app.get("/", (req, res) => {
   res.send("Welcome to Bookmarks App");
 });
 
+// Start (*) matches anything we haven't matched yet
+app.get("*", (request, response) => {
+  //   response.json({ error: "Page not found" });
+  response.status(404).json({ error: "Page not found" });
+});
+
 // EXPORT
 module.exports = app;
