@@ -5,8 +5,11 @@ const bookmarksController = require("./controllers/bookmarksController");
 // CONFIGURATION
 const app = express();
 
-// ROUTES
+// Middleware
+app.use(cors());
+app.use(express.json()); // Parse incoming JSON
 
+// ROUTES
 //Delegate everthing that starts with `/bookmarks` to the bookmarks controller
 // .use takes in 2 arguments:
 // - the sub-route for the controller to handle
